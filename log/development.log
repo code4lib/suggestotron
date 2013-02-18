@@ -1,0 +1,1563 @@
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-02-11 09:54:04 -0600
+Connecting to database specified by database.yml
+Served asset /rails.png - 200 OK (2ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-02-11 09:55:39 -0600
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-02-11 09:55:42 -0600
+Served asset /rails.png - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (23.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (13.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateTopics (20130211170903)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130211170903')[0m
+  [1m[35m (11.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTopics (20130211170903)
+Migrating to CreateVotes (20130211170949)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "votes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "topic_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130211170949')[0m
+  [1m[35m (30.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/topics" for 127.0.0.1 at 2013-02-11 11:12:55 -0600
+Connecting to database specified by database.yml
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT "topics".* FROM "topics" [0m
+  Rendered topics/index.html.erb within layouts/application (15.7ms)
+Compiled scaffolds.css  (13ms)  (pid 2467)
+Compiled topics.css  (0ms)  (pid 2467)
+Compiled votes.css  (0ms)  (pid 2467)
+Compiled application.css  (25ms)  (pid 2467)
+Compiled jquery.js  (1ms)  (pid 2467)
+Compiled jquery_ujs.js  (0ms)  (pid 2467)
+Compiled topics.js  (112ms)  (pid 2467)
+Compiled votes.js  (74ms)  (pid 2467)
+Compiled application.js  (226ms)  (pid 2467)
+Completed 200 OK in 390ms (Views: 344.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:12:56 -0600
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:12:56 -0600
+Served asset /scaffolds.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:12:56 -0600
+Served asset /votes.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:12:56 -0600
+Served asset /topics.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:12:56 -0600
+Served asset /topics.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:12:56 -0600
+Served asset /jquery_ujs.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:12:56 -0600
+Served asset /jquery.js - 200 OK (2ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:12:56 -0600
+Served asset /votes.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:12:56 -0600
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/topics/new" for 127.0.0.1 at 2013-02-11 11:12:58 -0600
+Processing by TopicsController#new as HTML
+  Rendered topics/_form.html.erb (7.9ms)
+  Rendered topics/new.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 39ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:12:58 -0600
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:12:58 -0600
+Served asset /topics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:12:58 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:12:58 -0600
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:12:58 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:12:58 -0600
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:12:58 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:12:58 -0600
+Served asset /topics.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:12:58 -0600
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started POST "/topics" for 127.0.0.1 at 2013-02-11 11:13:09 -0600
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X60SGNOQCvbbV+q/Gphae80ppCTNpGyvmzt5bY/Ivdg=", "topic"=>{"title"=>"My Awesome Topic", "description"=>"Coolio!"}, "commit"=>"Create Topic"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (7.6ms)[0m  [1mINSERT INTO "topics" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Mon, 11 Feb 2013 17:13:10 UTC +00:00], ["description", "Coolio!"], ["title", "My Awesome Topic"], ["updated_at", Mon, 11 Feb 2013 17:13:10 UTC +00:00]]
+  [1m[35m (28.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/topics/1
+Completed 302 Found in 40ms (ActiveRecord: 36.3ms)
+
+
+Started GET "/topics/1" for 127.0.0.1 at 2013-02-11 11:13:10 -0600
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered topics/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:10 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:10 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:10 -0600
+Served asset /votes.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:10 -0600
+Served asset /topics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:10 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:10 -0600
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:10 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:10 -0600
+Served asset /topics.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:10 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/topics/" for 127.0.0.1 at 2013-02-11 11:13:19 -0600
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.1ms)[0m  SELECT "topics".* FROM "topics" 
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 1[0m
+  Rendered topics/index.html.erb within layouts/application (43.6ms)
+Completed 200 OK in 48ms (Views: 46.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:19 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:19 -0600
+Served asset /topics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:19 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:19 -0600
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:19 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:19 -0600
+Served asset /topics.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:19 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:19 -0600
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:19 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/votes?topic_id=1" for 127.0.0.1 at 2013-02-11 11:13:20 -0600
+Processing by VotesController#create as HTML
+  Parameters: {"authenticity_token"=>"X60SGNOQCvbbV+q/Gphae80ppCTNpGyvmzt5bY/Ivdg=", "topic_id"=>"1"}
+  [1m[35mTopic Load (0.1ms)[0m  SELECT "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "votes" ("created_at", "topic_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 11 Feb 2013 17:13:20 UTC +00:00], ["topic_id", 1], ["updated_at", Mon, 11 Feb 2013 17:13:20 UTC +00:00]]
+  [1m[36m (24.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/topics
+Completed 302 Found in 30ms (ActiveRecord: 24.6ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2013-02-11 11:13:20 -0600
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.1ms)[0m  SELECT "topics".* FROM "topics" 
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 1[0m
+  Rendered topics/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:20 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:20 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:20 -0600
+Served asset /topics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:20 -0600
+Served asset /topics.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:20 -0600
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:20 -0600
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:20 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:20 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:20 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started POST "/votes?topic_id=1" for 127.0.0.1 at 2013-02-11 11:13:21 -0600
+Processing by VotesController#create as HTML
+  Parameters: {"authenticity_token"=>"X60SGNOQCvbbV+q/Gphae80ppCTNpGyvmzt5bY/Ivdg=", "topic_id"=>"1"}
+  [1m[35mTopic Load (0.1ms)[0m  SELECT "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "votes" ("created_at", "topic_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 11 Feb 2013 17:13:21 UTC +00:00], ["topic_id", 1], ["updated_at", Mon, 11 Feb 2013 17:13:21 UTC +00:00]]
+  [1m[36m (26.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/topics
+Completed 302 Found in 29ms (ActiveRecord: 26.7ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2013-02-11 11:13:22 -0600
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.1ms)[0m  SELECT "topics".* FROM "topics" 
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 1[0m
+  Rendered topics/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:22 -0600
+Served asset /application.css - 304 Not Modified (19ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:22 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:22 -0600
+Served asset /votes.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:22 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:22 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:22 -0600
+Served asset /topics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:22 -0600
+Served asset /topics.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:22 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:22 -0600
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started POST "/votes?topic_id=1" for 127.0.0.1 at 2013-02-11 11:13:23 -0600
+Processing by VotesController#create as HTML
+  Parameters: {"authenticity_token"=>"X60SGNOQCvbbV+q/Gphae80ppCTNpGyvmzt5bY/Ivdg=", "topic_id"=>"1"}
+  [1m[35mTopic Load (0.1ms)[0m  SELECT "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "votes" ("created_at", "topic_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 11 Feb 2013 17:13:23 UTC +00:00], ["topic_id", 1], ["updated_at", Mon, 11 Feb 2013 17:13:23 UTC +00:00]]
+  [1m[36m (26.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/topics
+Completed 302 Found in 29ms (ActiveRecord: 26.6ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2013-02-11 11:13:23 -0600
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.1ms)[0m  SELECT "topics".* FROM "topics" 
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 1[0m
+  Rendered topics/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:24 -0600
+Served asset /topics.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:24 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:24 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:24 -0600
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:24 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:24 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:24 -0600
+Served asset /topics.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:24 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:24 -0600
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/topics/new" for 127.0.0.1 at 2013-02-11 11:13:25 -0600
+Processing by TopicsController#new as HTML
+  Rendered topics/_form.html.erb (1.2ms)
+  Rendered topics/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 5ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:25 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:25 -0600
+Served asset /topics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:25 -0600
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:25 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:25 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:25 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:25 -0600
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:25 -0600
+Served asset /topics.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:25 -0600
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started POST "/topics" for 127.0.0.1 at 2013-02-11 11:13:37 -0600
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X60SGNOQCvbbV+q/Gphae80ppCTNpGyvmzt5bY/Ivdg=", "topic"=>{"title"=>"Another topic.", "description"=>"Whoa."}, "commit"=>"Create Topic"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Mon, 11 Feb 2013 17:13:37 UTC +00:00], ["description", "Whoa."], ["title", "Another topic."], ["updated_at", Mon, 11 Feb 2013 17:13:37 UTC +00:00]]
+  [1m[35m (19.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/topics/2
+Completed 302 Found in 21ms (ActiveRecord: 19.3ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2013-02-11 11:13:37 -0600
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered topics/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:37 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:37 -0600
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:37 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:37 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:37 -0600
+Served asset /topics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:37 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:37 -0600
+Served asset /topics.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:37 -0600
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:37 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2013-02-11 11:13:40 -0600
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.1ms)[0m  SELECT "topics".* FROM "topics" 
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 1[0m
+  [1m[35mVote Load (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 2
+  Rendered topics/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:40 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:40 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:40 -0600
+Served asset /topics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:40 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:40 -0600
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:40 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:40 -0600
+Served asset /topics.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:40 -0600
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:40 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/votes?topic_id=2" for 127.0.0.1 at 2013-02-11 11:13:42 -0600
+Processing by VotesController#create as HTML
+  Parameters: {"authenticity_token"=>"X60SGNOQCvbbV+q/Gphae80ppCTNpGyvmzt5bY/Ivdg=", "topic_id"=>"2"}
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "votes" ("created_at", "topic_id", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 11 Feb 2013 17:13:42 UTC +00:00], ["topic_id", 2], ["updated_at", Mon, 11 Feb 2013 17:13:42 UTC +00:00]]
+  [1m[35m (19.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/topics
+Completed 302 Found in 23ms (ActiveRecord: 19.5ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2013-02-11 11:13:42 -0600
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT "topics".* FROM "topics" [0m
+  [1m[35mVote Load (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 1
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 2[0m
+  Rendered topics/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:42 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:42 -0600
+Served asset /topics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:42 -0600
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:42 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:42 -0600
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:13:42 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:42 -0600
+Served asset /topics.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:42 -0600
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:13:42 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-11 11:18:51 -0600
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.1ms)[0m  SELECT "topics".* FROM "topics" 
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 1[0m
+  [1m[35mVote Load (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 2
+  Rendered topics/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 25ms (Views: 17.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:18:51 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:18:51 -0600
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:18:51 -0600
+Served asset /topics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:18:51 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:18:51 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:18:51 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:18:51 -0600
+Served asset /topics.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:18:51 -0600
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:18:51 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/votes?topic_id=1" for 127.0.0.1 at 2013-02-11 11:23:14 -0600
+Processing by VotesController#create as HTML
+  Parameters: {"authenticity_token"=>"X60SGNOQCvbbV+q/Gphae80ppCTNpGyvmzt5bY/Ivdg=", "topic_id"=>"1"}
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "votes" ("created_at", "topic_id", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 11 Feb 2013 17:23:14 UTC +00:00], ["topic_id", 1], ["updated_at", Mon, 11 Feb 2013 17:23:14 UTC +00:00]]
+  [1m[35m (28.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/topics
+Completed 302 Found in 33ms (ActiveRecord: 29.1ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2013-02-11 11:23:14 -0600
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT "topics".* FROM "topics" [0m
+  [1m[35mVote Load (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 1
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 2[0m
+  Rendered topics/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:23:14 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:23:14 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:23:14 -0600
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:23:14 -0600
+Served asset /topics.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:23:14 -0600
+Served asset /topics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:23:14 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:23:14 -0600
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:23:14 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:23:14 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/votes?topic_id=1" for 127.0.0.1 at 2013-02-11 11:23:15 -0600
+Processing by VotesController#create as HTML
+  Parameters: {"authenticity_token"=>"X60SGNOQCvbbV+q/Gphae80ppCTNpGyvmzt5bY/Ivdg=", "topic_id"=>"1"}
+  [1m[35mTopic Load (0.1ms)[0m  SELECT "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "votes" ("created_at", "topic_id", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 11 Feb 2013 17:23:15 UTC +00:00], ["topic_id", 1], ["updated_at", Mon, 11 Feb 2013 17:23:15 UTC +00:00]]
+  [1m[36m (19.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/topics
+Completed 302 Found in 23ms (ActiveRecord: 19.5ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2013-02-11 11:23:15 -0600
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.1ms)[0m  SELECT "topics".* FROM "topics" 
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 1[0m
+  [1m[35mVote Load (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 2
+  Rendered topics/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:23:15 -0600
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:23:15 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:23:15 -0600
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:23:15 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:23:15 -0600
+Served asset /topics.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:23:15 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:23:15 -0600
+Served asset /topics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:23:15 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:23:15 -0600
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-11 11:23:22 -0600
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT "topics".* FROM "topics" [0m
+  [1m[35mVote Load (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 1
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 2[0m
+  Rendered topics/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:23:22 -0600
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:23:22 -0600
+Served asset /votes.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:23:22 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:23:22 -0600
+Served asset /topics.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:23:22 -0600
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:23:22 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:23:22 -0600
+Served asset /topics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:23:22 -0600
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:23:22 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/topics/new" for 127.0.0.1 at 2013-02-11 11:23:38 -0600
+Processing by TopicsController#new as HTML
+  Rendered topics/_form.html.erb (2.2ms)
+  Rendered topics/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:23:38 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:23:38 -0600
+Served asset /votes.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:23:38 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:23:38 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:23:38 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:23:38 -0600
+Served asset /topics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:23:38 -0600
+Served asset /topics.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:23:38 -0600
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:23:38 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/topics" for 127.0.0.1 at 2013-02-11 11:23:44 -0600
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X60SGNOQCvbbV+q/Gphae80ppCTNpGyvmzt5bY/Ivdg=", "topic"=>{"title"=>"new topic", "description"=>""}, "commit"=>"Create Topic"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "topics" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Mon, 11 Feb 2013 17:23:44 UTC +00:00], ["description", ""], ["title", "new topic"], ["updated_at", Mon, 11 Feb 2013 17:23:44 UTC +00:00]]
+  [1m[35m (16.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/topics/3
+Completed 302 Found in 21ms (ActiveRecord: 17.2ms)
+
+
+Started GET "/topics/3" for 127.0.0.1 at 2013-02-11 11:23:44 -0600
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  Rendered topics/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:23:44 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:23:44 -0600
+Served asset /topics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:23:44 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:23:44 -0600
+Served asset /topics.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:23:44 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:23:44 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:23:44 -0600
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:23:44 -0600
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:23:44 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2013-02-11 11:24:00 -0600
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.1ms)[0m  SELECT "topics".* FROM "topics" 
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 1[0m
+  [1m[35mVote Load (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 2
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 3[0m
+  Rendered topics/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:24:00 -0600
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:24:00 -0600
+Served asset /votes.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:24:00 -0600
+Served asset /topics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:24:00 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:24:00 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:24:00 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:24:00 -0600
+Served asset /topics.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:24:00 -0600
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:24:00 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/topics/new" for 127.0.0.1 at 2013-02-11 11:26:10 -0600
+Processing by TopicsController#new as HTML
+  Rendered topics/_form.html.erb (1.6ms)
+  Rendered topics/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 12ms (Views: 6.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:26:10 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:26:10 -0600
+Served asset /topics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:26:10 -0600
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:26:10 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:26:10 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:26:10 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:26:10 -0600
+Served asset /topics.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:26:10 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:26:10 -0600
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started POST "/topics" for 127.0.0.1 at 2013-02-11 11:26:19 -0600
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X60SGNOQCvbbV+q/Gphae80ppCTNpGyvmzt5bY/Ivdg=", "topic"=>{"title"=>"new topic", "description"=>""}, "commit"=>"Create Topic"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "topics" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Mon, 11 Feb 2013 17:26:19 UTC +00:00], ["description", ""], ["title", "new topic"], ["updated_at", Mon, 11 Feb 2013 17:26:19 UTC +00:00]]
+  [1m[35m (17.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/topics
+Completed 302 Found in 22ms (ActiveRecord: 17.9ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2013-02-11 11:26:19 -0600
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT "topics".* FROM "topics" [0m
+  [1m[35mVote Load (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 1
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 2[0m
+  [1m[35mVote Load (0.0ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 3
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 4[0m
+  Rendered topics/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:26:19 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:26:19 -0600
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:26:19 -0600
+Served asset /topics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:26:19 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:26:19 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:26:19 -0600
+Served asset /topics.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:26:19 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:26:19 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:26:19 -0600
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/topics/4" for 127.0.0.1 at 2013-02-11 11:26:27 -0600
+Processing by TopicsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"X60SGNOQCvbbV+q/Gphae80ppCTNpGyvmzt5bY/Ivdg=", "id"=>"4"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "topics" WHERE "topics"."id" = ?  [["id", 4]]
+  [1m[36m (26.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/topics
+Completed 302 Found in 29ms (ActiveRecord: 26.7ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2013-02-11 11:26:27 -0600
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.1ms)[0m  SELECT "topics".* FROM "topics" 
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 1[0m
+  [1m[35mVote Load (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 2
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 3[0m
+  Rendered topics/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:26:27 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:26:27 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:26:27 -0600
+Served asset /topics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:26:27 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:26:27 -0600
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:26:27 -0600
+Served asset /topics.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:26:27 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:26:27 -0600
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:26:27 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/topics/new" for 127.0.0.1 at 2013-02-11 11:30:25 -0600
+Processing by TopicsController#new as HTML
+  Rendered topics/_form.html.erb (1.4ms)
+  Rendered topics/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:30:25 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:30:25 -0600
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:30:25 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:30:25 -0600
+Served asset /topics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:30:25 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:30:26 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:30:26 -0600
+Served asset /topics.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:30:26 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:30:26 -0600
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started POST "/topics" for 127.0.0.1 at 2013-02-11 11:30:37 -0600
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X60SGNOQCvbbV+q/Gphae80ppCTNpGyvmzt5bY/Ivdg=", "topic"=>{"title"=>"topic topic", "description"=>""}, "commit"=>"Create Topic"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "topics" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Mon, 11 Feb 2013 17:30:37 UTC +00:00], ["description", ""], ["title", "topic topic"], ["updated_at", Mon, 11 Feb 2013 17:30:37 UTC +00:00]]
+  [1m[35m (18.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/topics
+Completed 302 Found in 22ms (ActiveRecord: 19.1ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2013-02-11 11:30:37 -0600
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT "topics".* FROM "topics" [0m
+  [1m[35mVote Load (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 1
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 2[0m
+  [1m[35mVote Load (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 3
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 5[0m
+  Rendered topics/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:30:38 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:30:38 -0600
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:30:38 -0600
+Served asset /topics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:30:38 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:30:38 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:30:38 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:30:38 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:30:38 -0600
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:30:38 -0600
+Served asset /topics.js - 304 Not Modified (0ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2013-02-11 11:35:32 -0600
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.1ms)[0m  SELECT "topics".* FROM "topics" 
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 1[0m
+  [1m[35mVote Load (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 2
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 3[0m
+  [1m[35mVote Load (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 5
+  Rendered topics/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:35:32 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:35:32 -0600
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:35:32 -0600
+Served asset /topics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:35:32 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:35:32 -0600
+Served asset /topics.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:35:32 -0600
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:35:32 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:35:32 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:35:32 -0600
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/topics/1" for 127.0.0.1 at 2013-02-11 11:35:43 -0600
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered topics/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:35:43 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:35:43 -0600
+Served asset /topics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:35:43 -0600
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:35:43 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:35:43 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:35:43 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:35:43 -0600
+Served asset /topics.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:35:43 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:35:43 -0600
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2013-02-11 11:35:52 -0600
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.1ms)[0m  SELECT "topics".* FROM "topics" 
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 1[0m
+  [1m[35mVote Load (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 2
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 3[0m
+  [1m[35mVote Load (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 5
+  Rendered topics/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:35:52 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:35:52 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:35:52 -0600
+Served asset /topics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:35:52 -0600
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:35:52 -0600
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:35:52 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:35:52 -0600
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:35:52 -0600
+Served asset /topics.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:35:52 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/topics/1" for 127.0.0.1 at 2013-02-11 11:43:37 -0600
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered topics/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:43:37 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:43:37 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:43:37 -0600
+Served asset /topics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:43:37 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:43:37 -0600
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:43:37 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:43:37 -0600
+Served asset /topics.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:43:37 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:43:37 -0600
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/topics/1" for 127.0.0.1 at 2013-02-11 11:43:42 -0600
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTopic Load (0.1ms)[0m  SELECT "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered topics/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:43:42 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:43:42 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:43:42 -0600
+Served asset /topics.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:43:42 -0600
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:43:42 -0600
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:43:42 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:43:42 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:43:42 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:43:42 -0600
+Served asset /topics.js - 304 Not Modified (0ms)
+
+
+Started GET "/topics/1/edit" for 127.0.0.1 at 2013-02-11 11:43:47 -0600
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered topics/_form.html.erb (1.4ms)
+  Rendered topics/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:43:47 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:43:47 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:43:47 -0600
+Served asset /topics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:43:47 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:43:47 -0600
+Served asset /topics.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:43:47 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:43:47 -0600
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:43:47 -0600
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:43:47 -0600
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2013-02-11 11:44:05 -0600
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics" 
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 1[0m
+  [1m[35mVote Load (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 2
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 3[0m
+  [1m[35mVote Load (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 5
+  Rendered topics/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:44:05 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:44:05 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:44:05 -0600
+Served asset /topics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:44:05 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:44:05 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:44:05 -0600
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:44:05 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:44:05 -0600
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:44:05 -0600
+Served asset /topics.js - 304 Not Modified (0ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2013-02-11 11:44:50 -0600
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT "topics".* FROM "topics" [0m
+  [1m[35mVote Load (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 1
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 2[0m
+  [1m[35mVote Load (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 3
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."topic_id" = 5[0m
+  Rendered topics/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-11 11:44:50 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-11 11:44:50 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-11 11:44:50 -0600
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-02-11 11:44:50 -0600
+Served asset /topics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-11 11:44:50 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-02-11 11:44:50 -0600
+Served asset /topics.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2013-02-11 11:44:50 -0600
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2013-02-11 11:44:50 -0600
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-11 11:44:50 -0600
+Served asset /application.js - 304 Not Modified (1ms)
